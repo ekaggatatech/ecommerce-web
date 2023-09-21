@@ -1,0 +1,161 @@
+header{
+    background: #1C1E1F;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.page-wrap{
+    padding: 4rem 0;
+    flex-grow: 1;
+}
+
+header .top-bar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;    
+}
+
+header .container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+header .top-bar li a {
+    padding: .25rem 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+header .top-bar li{
+    position: relative;
+
+}
+
+header .top-bar li:first-child a{
+    padding-left: 0;
+    color: blue;
+}
+
+header .top-bar li:last-child a{
+    padding-right: 0;
+}
+
+header .top-bar li .sub-menu{
+    display: none;
+    z-index: 999;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #1f1e1e;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100px;
+    border-radius: .25rem;
+}
+
+header .top-bar li .sub-menu a{
+    color: #fff;
+    padding: .25rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+header .top-bar li .sub-menu a:hover{
+    color: blue;
+
+}
+
+header .top-bar .menu-item-has-children:hover .sub-menu{
+    display: block;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #1C1E1F;
+    color: white;
+    padding: 20px 0; 
+    
+}
+
+footer .footer-bar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;    
+}
+
+footer .container{
+    display: flex;
+    align-items: left;
+    height: 100%;
+}
+
+footer .footer-bar a {
+    position: relative; 
+    padding: .25rem 1rem;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px; 
+    text-align: left;
+}
+
+footer .footer-bar ul:first-child a{
+    padding-left: 0;
+}
+
+footer .footer-bar :last-child a{
+    padding-right: 0;
+}
+
+.menu-description {
+    font-size: 12px;
+    position: relative;
+    color: gray; 
+    margin-top: 10px; 
+    text-align: left;
+    padding: .25rem 1rem; 
+}
+
+.search-bar {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+  }
+  .search-bar input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    height: 30px;
+  }
+  
+  .search-bar button {
+    padding: 5px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    height: 30px;
+    cursor: pointer;
+  }
+  
