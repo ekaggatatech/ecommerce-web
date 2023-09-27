@@ -19,6 +19,7 @@ add_action('wp_enqueue_scripts','load_js');
 add_theme_support('menus');
 add_theme_support('widgets');
 add_theme_support('post-thumbnails');
+add_theme_support( 'post-formats',  array( 'aside', 'gallery', 'quote', 'image', 'video' ) );
 
 
 //Menus
@@ -79,7 +80,7 @@ class Custom_Menu_Walker extends Walker_Nav_Menu {
 
 //Custom image sizes
 add_image_size('blog-large', 800, 600, false);
-add_image_size('blog-small', 200, 100, true);
+add_image_size('blog-small', 100, 90, true);
 
 function my_first_post_type()
 {
@@ -128,4 +129,16 @@ function my_first_taxonomy()
 
 }
 add_action('init', 'my_first_taxonomy');
+
+function my_sidebars()
+{register_sidebar(
+    array(
+        'name' => 'Page Sidebar',
+        'id' => 'page-sidebar',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>'
+    )
+);
+}
+add_action('widgets_init','my_sidebars');
 

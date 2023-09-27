@@ -8,6 +8,4 @@
         <?php next_posts_link();?>
     </div>
 </section>
-
-
 <?php get_footer();?>
