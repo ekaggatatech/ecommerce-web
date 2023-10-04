@@ -46,16 +46,16 @@
             <h2>Women's Collection</h2>
             <div class="product-list row">
                 <?php
-                $men_args = array(
+                $women_args = array(
                     'post_type' => 'post',          
                     'category_name' => 'women',      
                     'posts_per_page' => 6,         
                 );
 
-                $men_query = new WP_Query($men_args);
+                $women_query = new WP_Query($women_args);
 
-                if ($men_query->have_posts()) :
-                    while ($men_query->have_posts()) : $men_query->the_post();
+                if ($women_query->have_posts()) :
+                    while ($women_query->have_posts()) : $women_query->the_post();
                 ?>
                         <div class="col-md-4">
                             <div class="product-card">
@@ -71,27 +71,27 @@
                     endwhile;
                     wp_reset_postdata();
                 else :
-                    echo '<p>No Men\'s items found.</p>';
+                    echo '<p>No Women\'s items found.</p>';
                 endif;
                 ?>
             </div>
         </div>
         
-        <!-- children's Items -->
+        <!-- Children's Items -->
         <div class="product-category">
             <h2>Children's Collection</h2>
             <div class="product-list row">
                 <?php
-                $men_args = array(
+                $children_args = array(
                     'post_type' => 'post',          
                     'category_name' => 'children',      
                     'posts_per_page' => 6,         
                 );
 
-                $men_query = new WP_Query($men_args);
+                $children_query = new WP_Query($children_args);
 
-                if ($men_query->have_posts()) :
-                    while ($men_query->have_posts()) : $men_query->the_post();
+                if ($children_query->have_posts()) :
+                    while ($children_query->have_posts()) : $children_query->the_post();
                 ?>
                         <div class="col-md-4">
                             <div class="product-card">
@@ -107,7 +107,7 @@
                     endwhile;
                     wp_reset_postdata();
                 else :
-                    echo '<p>No Men\'s items found.</p>';
+                    echo '<p>No Children\'s items found.</p>';
                 endif;
                 ?>
             </div>

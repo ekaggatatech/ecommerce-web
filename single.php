@@ -31,7 +31,37 @@
                 </ul>
             </div>
         </div>
+        
+        <!-- Gallery Section -->
+        <div class="product-gallery">
+            <?php
+            $images = acf_photo_gallery('gallery', $post->ID);
+            if (count($images)) :
+            ?>
+            <div class="gallery">
+                <?php foreach ($images as $image) : ?>
+                    <div class="gallery-item">
+                        <a href="<?php echo esc_url($image['full_image_url']); ?>" class="gallery-link">
+                            <img src="<?php echo esc_url($image['thumbnail_image_url']); ?>" alt="<?php echo esc_attr($image['title']); ?>">
+                        </a>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+            <?php endif; ?>
+        </div>
     </div>
 </section>
+
+<script>
+jQuery(document).ready(function($) {
+    $('.gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
+    });
+});
+</script>
 
 <?php get_footer(); ?>

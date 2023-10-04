@@ -224,16 +224,16 @@ div .blog-content a{
     text-align: left;
 }
 
+/* Product Page Styles */
 .product-page {
     padding: 40px 0;
-    background-color: #f7f7f7;
+    background-color: #f4f4f4; /* Light gray background */
 }
 
 .product-title {
-    font-size: 24px;
+    font-size: 36px;
     margin-bottom: 20px;
-    margin-top: 20px;
-    color: #333;
+    color: #042286; /* Highlight color */
 }
 
 .product-image {
@@ -244,39 +244,140 @@ div .blog-content a{
     max-width: 100%;
     height: auto;
     border: 2px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .product-details {
     margin-top: 30px;
 }
 
+/* Product Info Styling */
 .product-info {
     list-style: none;
     padding: 0;
 }
 
 .product-info li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-size: 18px;
-    color: #555;
+    color: #666; /* Subdued text color */
+    background-color: #f7f7f7; /* Light gray background for custom fields */
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .info-label {
     font-weight: bold;
     margin-right: 10px;
-    color: #333;
+    color: #042286; /* Highlight color */
 }
 
 .info-value {
-    color: #777;
+    color: #333; /* Subdued text color */
 }
 
-/* Global Styles */
-.frontpage {
+/* Section Background Colors */
+.product-title-section {
+    background-color: #fff; /* White background for title section */
+}
+
+.product-image-section {
+    background-color: #f9f9f9; /* Light gray background for image section */
+}
+
+.product-description-section {
+    background-color: #e0e0e0; /* Slightly darker gray background for description section */
+}
+
+.product-gallery {
+    background-color: #f4f4f4; /* Light gray background for gallery section */
+    padding: 40px 0;
+}
+
+/* Gallery Section Styling */
+.product-gallery {
+    margin-top: 30px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    flex: 0 0 calc(33.3333% - 20px); /* Adjust the width of gallery items as needed */
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-link {
+    display: block;
+    position: relative;
+}
+
+.gallery-link img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.gallery-link:hover img {
+    transform: scale(1.05);
+}
+
+/* Magnific Popup Styles */
+.mfp-container {
+    padding: 20px; /* Padding around the lightbox content */
     background-color: #fff;
-    color: #042286;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mfp-title {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.mfp-close-btn-in .mfp-close {
+    color: #333; /* Close button color */
+    font-size: 24px;
+    top: -20px;
+    right: -20px;
+    width: 40px;
+    height: 40px;
+    line-height: 1;
+    background-color: #fff; /* Close button background color */
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.mfp-close-btn-in .mfp-close:hover {
+    color: #4861ce; /* Close button color on hover */
+    background-color: #f7f7f7; /* Close button background color on hover */
+}
+
+/* Additional Styling (Optional) */
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 0 0 calc(50% - 20px); /* Adjust for smaller screens */
+    }
+}
+
+
+
+
+
+/* Front page Styles */
+.frontpage {
+    background-color: #f7f7f7;
+    color: #333;
     padding: 50px 0;
     text-align: center;
 }
@@ -289,6 +390,7 @@ div .blog-content a{
 
 h1 {
     font-size: 36px;
+    color: #042286; /* Highlight color */
 }
 
 .product-category {
@@ -310,36 +412,13 @@ h1 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.2s;
-}
-
-.product-card:hover {
-    transform: scale(1.05);
-}
-
-.product-card img {
-    max-width: 100%;
-    height: auto;
-}
-
-.product-card h3 {
-    font-size: 20px;
-    margin: 10px 0;
-    color: #042286;
-}
-
-/* Additional CSS for Product Card Styling */
-.product-card {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.2s;
     margin-bottom: 20px;
 }
 
 .product-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Slightly elevated on hover */
+    background-color: #f7f7f7; /* Light gray background on hover */
 }
 
 .product-card img {
@@ -354,5 +433,70 @@ h1 {
     color: #042286;
 }
 
+/* Subtle Design Elements */
+.product-category h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333; /* Subdued heading color */
+}
 
+.product-card a {
+    text-decoration: none;
+    color: #042286; /* Highlight color for links */
+}
 
+.product-card a:hover {
+    color: #4861ce; /* Highlight color on hover */
+}
+
+/* Background Colors for Sections */
+/* Men's Collection Section */
+.product-category:nth-child(odd) {
+    background: linear-gradient(to bottom, #f9f9f9, #f1f1f1); /* Gradient background for odd sections */
+}
+
+/* Women's Collection Section */
+.product-category:nth-child(even) {
+    background: linear-gradient(to bottom, #f3f3f3, #e0e0e0); /* Gradient background for even sections */
+}
+
+/* Children's Collection Section */
+.product-category:nth-child(3n) {
+    background: linear-gradient(to bottom, #f7f7f7, #d9d9d9); /* Gradient background for every third section */
+}
+
+/* Widget Title Styling */
+.widget-title {
+    font-size: 24px;
+    color: #042286; /* Highlight color */
+    margin-bottom: 20px;
+}
+
+.widget-title a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.widget-title a:hover {
+    color: #042286; /* Highlight color on hover */
+}
+
+/* Recent Posts Widget Styling */
+.widget_recent_entries ul li {
+    padding-left: 0;
+    border-left: none;
+    margin-left: 0;
+}
+
+/* Categories Widget Styling */
+.widget_categories ul {
+    padding-left: 0;
+}
+
+.widget_categories ul li {
+    padding-left: 20px;
+    border-left: 2px solid #042286; /* Highlight color for category bullets */
+    margin-left: 0;
+}

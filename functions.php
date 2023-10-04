@@ -142,3 +142,18 @@ function my_sidebars()
 }
 add_action('widgets_init','my_sidebars');
 
+//Magnific pop up
+function enqueue_magnific_popup() {
+    // Register Magnific Popup CSS
+    wp_register_style('magnific-popup', 'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css', array(), '1.1.0', 'all');
+
+    // Register Magnific Popup JavaScript
+    wp_register_script('magnific-popup', 'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js', array('jquery'), '1.1.0', true);
+
+    // Enqueue both the CSS and JavaScript
+    wp_enqueue_style('magnific-popup');
+    wp_enqueue_script('magnific-popup');
+}
+add_action('wp_enqueue_scripts', 'enqueue_magnific_popup');
+
+
