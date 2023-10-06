@@ -3,6 +3,34 @@
 <section class="frontpage">
     <div class="container">
         <h1>Welcome to E-Commerce Store</h1>
+
+        <!-- Bootstrap Carousel Slider -->
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <?php
+                $images = acf_photo_gallery('sliderimages', $post->ID);
+                if (count($images)) :
+                    $active = 'active';
+                    foreach ($images as $image) :
+                ?>
+                        <div class="carousel-item <?php echo $active; ?>">
+                            <img src="<?php echo esc_url($image['full_image_url']); ?>" class="d-block w-100" alt="<?php echo esc_attr($image['title']); ?>">
+                        </div>
+                <?php
+                        $active = ''; // Remove 'active' class after the first slide
+                    endforeach;
+                endif;
+                ?>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
+        </div>
         
         <!-- Men's Items -->
         <div class="product-category">

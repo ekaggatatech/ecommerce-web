@@ -82,54 +82,6 @@ class Custom_Menu_Walker extends Walker_Nav_Menu {
 add_image_size('blog-large', 800, 600, false);
 add_image_size('blog-small', 100, 90, true);
 
-function my_first_post_type()
-{
-
-	$args = array(
-
-
-		'labels' => array(
-
-					'name' => 'Items',
-					'singular_name' => 'Item',
-		),
-		'hierarchical' => false,
-		'public' => true,
-		'has_archive' => true,
-		'menu_icon' => 'dashicons-images-alt2',
-		'supports' => array('title', 'editor', 'thumbnail','custom-fields'),
-		//'rewrite' => array('slug' => 'cars'),	
-
-	);
-
-
-	register_post_type('items', $args);
-
-
-}
-add_action('init', 'my_first_post_type');
-
-function my_first_taxonomy()
-{
-
-			$args = array(
-
-					'labels' => array(
-							'name' => 'Categories',
-							'singular_name' => 'Category',
-					),
-
-					'public' => true,
-					'hierarchical' => true,
-
-			);
-
-
-			register_taxonomy('Categories', array('items'), $args);
-
-}
-add_action('init', 'my_first_taxonomy');
-
 function my_sidebars()
 {register_sidebar(
     array(

@@ -128,6 +128,37 @@ footer .footer-bar :last-child a{
     padding-right: 0;
 }
 
+/* style-aboutus.css */
+
+/* About Us Section */
+.about-us {
+    background-color: #f7f7f7; /* Light gray background */
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.about-content h2 {
+    font-size: 36px;
+    color: #042286; /* Highlight color */
+}
+
+.about-content p {
+    font-size: 18px;
+    color: #555; /* Subdued text color */
+    margin-top: 20px;
+}
+
+
 .menu-description {
     font-size: 12px;
     position: relative;
@@ -261,8 +292,8 @@ div .blog-content a{
 .product-info li {
     margin-bottom: 15px;
     font-size: 18px;
-    color: #666; /* Subdued text color */
-    background-color: #f7f7f7; /* Light gray background for custom fields */
+    color: #666; 
+    background-color: #f7f7f7; 
     padding: 12px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -271,28 +302,28 @@ div .blog-content a{
 .info-label {
     font-weight: bold;
     margin-right: 10px;
-    color: #042286; /* Highlight color */
+    color: #042286; 
 }
 
 .info-value {
-    color: #333; /* Subdued text color */
+    color: #333; 
 }
 
 /* Section Background Colors */
 .product-title-section {
-    background-color: #fff; /* White background for title section */
+    background-color: #fff; 
 }
 
 .product-image-section {
-    background-color: #f9f9f9; /* Light gray background for image section */
+    background-color: #f9f9f9;
 }
 
 .product-description-section {
-    background-color: #e0e0e0; /* Slightly darker gray background for description section */
+    background-color: #e0e0e0; 
 }
 
 .product-gallery {
-    background-color: #f4f4f4; /* Light gray background for gallery section */
+    background-color: #f4f4f4; 
     padding: 40px 0;
 }
 
@@ -309,8 +340,7 @@ div .blog-content a{
 }
 
 .gallery-item {
-    flex: 0 0 calc(33.3333% - 20px); /* Adjust the width of gallery items as needed */
-    position: relative;
+    flex: 0 0 calc(33.3333% - 20px); 
     overflow: hidden;
 }
 
@@ -417,8 +447,8 @@ h1 {
 
 .product-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Slightly elevated on hover */
-    background-color: #f7f7f7; /* Light gray background on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); 
+    background-color: #f7f7f7;
 }
 
 .product-card img {
@@ -446,29 +476,29 @@ h1 {
 }
 
 .product-card a:hover {
-    color: #4861ce; /* Highlight color on hover */
+    color: #4861ce; 
 }
 
 /* Background Colors for Sections */
 /* Men's Collection Section */
 .product-category:nth-child(odd) {
-    background: linear-gradient(to bottom, #f9f9f9, #f1f1f1); /* Gradient background for odd sections */
+    background: linear-gradient(to bottom, #f9f9f9, #f1f1f1);
 }
 
 /* Women's Collection Section */
 .product-category:nth-child(even) {
-    background: linear-gradient(to bottom, #f3f3f3, #e0e0e0); /* Gradient background for even sections */
+    background: linear-gradient(to bottom, #f3f3f3, #e0e0e0); 
 }
 
 /* Children's Collection Section */
 .product-category:nth-child(3n) {
-    background: linear-gradient(to bottom, #f7f7f7, #d9d9d9); /* Gradient background for every third section */
+    background: linear-gradient(to bottom, #f7f7f7, #d9d9d9); 
 }
 
 /* Widget Title Styling */
 .widget-title {
     font-size: 24px;
-    color: #042286; /* Highlight color */
+    color: #042286; 
     margin-bottom: 20px;
 }
 
@@ -480,23 +510,128 @@ h1 {
 }
 
 .widget-title a:hover {
-    color: #042286; /* Highlight color on hover */
+    color: #042286; 
 }
 
-/* Recent Posts Widget Styling */
 .widget_recent_entries ul li {
     padding-left: 0;
     border-left: none;
     margin-left: 0;
 }
 
-/* Categories Widget Styling */
 .widget_categories ul {
     padding-left: 0;
 }
 
 .widget_categories ul li {
     padding-left: 20px;
-    border-left: 2px solid #042286; /* Highlight color for category bullets */
+    border-left: 2px solid #042286; 
     margin-left: 0;
+}
+/* Carousel Styles */
+.carousel {
+    margin-top: 20px;
+    max-width: 100%; 
+}
+
+.carousel-inner img {
+    width: 100%; 
+    height: auto; 
+}
+.product-category {
+    margin-top: 40px;
+}
+
+.product-category h2 {
+    font-size: 24px;
+}
+
+.product-card {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Contact Us Section */
+.contact-us {
+    background-color: #f7f7f7; 
+    text-align: center;
+    padding: 4rem 0;
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #042286; 
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.contact-details {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details h2 {
+    font-size: 24px;
+    color: #042286; 
+}
+
+.contact-details p {
+    font-size: 18px;
+    color: #555; 
+    margin-top: 10px;
+}
+
+.social-media {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff; 
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-media h2 {
+    font-size: 24px;
+    color: #042286; 
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-media li {
+    margin-top: 10px;
+}
+
+.social-media a {
+    font-size: 18px;
+    color: #042286; 
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-media a:hover {
+    color: #ff6600; 
+}
+.contact-form {
+    margin-top: 40px;
 }
